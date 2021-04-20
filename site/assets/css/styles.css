@@ -1,18 +1,353 @@
 
+ /*CONTENTS
+ 1. Elements
+ 2. Classes
+ 3. Typography
+ */
+ * {
+	margin: 0;
+	padding: 0;
+}
+body {
+	text-align: center;
+    background-color: white;
+    color:  rgb(38, 38, 38);
+}
+.wrapper {
+	width: 100%;
+	margin: 0 auto;
+}
+header {
+	height: 100px;
+	background: rgb(38, 38, 38);
+	width: 100%;
+	z-index: 10;
+	position: fixed;
+}
+
+
+
+h1 {
+	width: 30%;
+	float: left;
+	line-height: 100px;
+    text-decoration: none;
+	font-size: 30px;
+	font-family: poppins;
+	color: #fff;
+	letter-spacing: 5px;
+	
+}
+
+.normal-btn{
+    padding: 18px 40px;
+    background:  rgb(38, 38, 38);
+    color: white;
+    border: none;
+}
+
+.normal-btn:hover{
+    background:  rgb(77, 76, 76);;
+    
+    color:  white;
+}
+
+/*--nav--*/
+
+.menu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu li a{
+    display: block;
+    
+}
+nav {
+    height: 100%;
+}
+nav ul {
+	/* float: right; */
+	margin-right: 20px;
+    display: flex;
+    height: 100%;
+    align-content: center;
+    justify-content: flex-end;
+
+}
+
+nav ul li{
+    display: inline-block;
+    margin:0 5px;
+    align-self: center;
+}
+
+nav ul li a{
+    color: white;
+    font-size: 17px;
+    text-transform:uppercase;
+}
+
+
+nav a {
+	text-decoration: none;
+	font-family: poppins;
+	letter-spacing: 4px;
+	text-decoration: ;
+	margin: 0 10px;
+	color: #fff;
+}
+
+a:hover{
+    color: rgb(180, 80, 180);
+    transition: .5s;
+}
+
+/*---introduction---*/
+
+#introduction{
+    padding: 100px 0;
+   
+    
+}
+
+.row-2-col{
+    margin-bottom: 65px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.intro-left-col{
+    flex-basis: 50%;
+}
+
+.intro-left-col img{
+    width: 70%;
+
+}
+
+.intro-right-col{
+    flex-basis: 50%;
+}
+
+.intro-text{
+    max-width: 100%;
+    font-size: 20px;
+    word-spacing: 5px;
+    line-height: 1.5;
+}
+
+/*---Featured Images---*/
+
+#featured{
+   width: 100%;
+}
+
+.featured-row{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.featured-col{
+    flex-basis: 25%;
+    box-align: center;
+}
+
+.featured-col img{
+    width: 250px;
+  height: 250px;
+}
+
+/* https://www.youtube.com/watch?v=oLgtucwjVI*/
+
+.banner{
+	background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+    url(file:///Users/cferg/Desktop/mywebsite-11056/site/assets/images/extra1-churchill-house-by-robin%20boyd-photo-copyright-darren-bradley.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    color: white;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}
+
+.content-area {
+	width: 100%;
+	position: relative;
+	background:white;
+	height: 1500px;
+}
+
+.content-area h2 {
+	font-family: poppins;
+	letter-spacing: 4px;
+	padding-top: 30px;
+	font-size: 40px;
+	
+}
+
+.container{
+    display:flex;
+    font-family: poppins;
+}
+
+}
  body{
-    background-color:
+    background-color: white;
     font-size: 18px;
     font-family:Arial, Helvetica, sans-serif
-    
-      
 }
+
+
+h1{
+    font-size: 4rem;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+h1 .small{
+    display: none;
+  
+}
+h1 .big{ 
+    visibility: visible;
+}
+
+
+h2{
+    font-size: 3rem;
+}
+
+h3{
+    font-size: 2rem;
+}
+
 
 p{
-    
     font-size: 1rem;
-    max-width: 80ch;
-    line-height: 1.3rem;
+    font-weight: 400;
+    padding: 1rem;
+    margin: 5rem 5rem;
+    color: black; 
+}
+
+img{
+    
+   
+    
+    max-width: 100%;
+    height: auto;
+    
     
 }
 
+main{
+    width: auto;
+    margin: 0 auto;
+}
 
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+
+
+
+p a{
+    color: red;
+    
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.grid h2, .grid div{
+    grid-column: 1/4;
+}
+
+.flex-gallery{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex-gallery > li{
+    width: 40%;
+    flex-grow: 1;
+}
+
+.flex-gallery img{
+    max-height: 100%;
+    min-width: 100%;
+    object-fit: cover;
+}
+
+.footer {
+    position: static;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(38, 38, 38);
+    color: white;
+    text-align: center;
+  }
+
+@media (max-width: 900px) { 
+    h1 .small{
+        display: unset;
+      
+    }
+    h1 .big{ 
+        display: none;
+    }
+    
+}
+
+/* @media (max-width: 800px){
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: black;
+        text-align: center;
+    }
+}
+
+@media screen and (max-device-width: 600px) { 
+    .column { 
+        float: none; 
+    } 
+}
+
+@media screen and (max-device-width: 480px) {
+    .grid{
+        display: initial;
+    }
+    .flex-gallery > li{
+        width: 20%;
+    }
+    
+
+@media screen and (max-device-width: 300px) {
+    .flex-gallery{
+        flex-direction: column;
+    }
+ */
