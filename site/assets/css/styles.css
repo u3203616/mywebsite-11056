@@ -18,7 +18,7 @@ body {
 	margin: 0 auto;
 }
 header {
-	height: 100px;
+	min-height: 100px;
 	background: rgb(38, 38, 38);
 	width: 100%;
 	z-index: 10;
@@ -354,6 +354,10 @@ a{
 p a{
     color: red;
     
+}
+
+#homeLink{
+    z-index: 1;
 }
 
 .grid{
