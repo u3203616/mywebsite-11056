@@ -9,7 +9,7 @@
 	padding: 0;
 }
 body {
-	text-align: center;
+	
     background-color: white;
     color:  rgb(38, 38, 38);
     display: flex;
@@ -19,7 +19,10 @@ body {
 .wrapper {
 	width: 100%;
 	margin: 0 auto;
+    padding: 0 5rem ;
+    box-sizing: border-box;
 }
+
 header {
 	min-height: 100px;
 	background: rgb(38, 38, 38);
@@ -28,15 +31,18 @@ header {
 	position: fixed;
 }
 
-li {
-    font-weight: bolder;
-    font-family: poppins;
-   
+
+ul li {
+    list-style: disc;
+
 }
+
+
 
 h1 {
 	width: 30%;
 	float: left;
+    padding-left: 5rem;
 	line-height: 100px;
     text-decoration: none;
 	font-size: 30px;
@@ -108,6 +114,7 @@ h1 {
     width: 60px;
     height: 60px;
     padding: 1rem;
+    padding-right: 5rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -223,8 +230,7 @@ h1 {
 
   /* Banner for all content pages*/
   .all-banner{
-  background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url("../images/extra1-churchill-house-by-robin-boyd-photo-copyright-darren-bradley.jpg");
-  
+  background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url("../images/extra1-churchill-house-by-robin-boyd-photo-copyright-darren-bradley.jpg");
   background-position: center center;
   background-size: cover;
   width: 100%;
@@ -394,17 +400,19 @@ h1 {
 /* https://www.youtube.com/watch?v=2zQ9HoD_GcU&t=165s  (used to create banner image with dark transparency)*/
 
 .home-banner{
-	background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url("../images/extra1-churchill-house-by-robin-boyd-photo-copyright-darren-bradley.jpg");
-    background-position: center center;
-    background-size: cover;
-    width: 100%;
-    height: 100vh;
-    color: white;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: column;
-    
+background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url("../images/extra1-churchill-house-by-robin-boyd-photo-copyright-darren-bradley.jpg");
+background-position: center center;
+background-size: cover;
+width: 100%;
+height: 100vh;
+color: white;
+font-family: poppins;
+font-weight: bold;
+display:flex;
+justify-content: center;
+align-items: center;
+flex-flow: column;
+
 }
 
 .content-area {
@@ -440,6 +448,8 @@ h1 .big{
 
 h2{
     font-size: 3rem;
+    padding-left: 5rem;
+    padding-bottom: 1rem;
 }
 
 h3{
@@ -447,11 +457,15 @@ h3{
 }
 
 
-p{
+p,
+ul{
     font-size: 20px;
     font-weight: 400;
-    padding: 1rem;
-    margin: 5rem 5rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin: 5rem 0;
     color: black; 
     font-family: poppins;
     font-weight: bolder;
@@ -461,6 +475,7 @@ img{
     max-width: 100%;
     height: auto;
     border: 3px solid rgb(38, 38, 38); 
+   
     
 }
 
@@ -504,13 +519,13 @@ footer {
 }
 
 
-@media screen and (max-width: 1200px){
+/* @media screen and (max-width: 1200px){
   
 
     @media screen and (max-width: 1000px){
         
 
-    }
+    } */
 
     @media (max-width: 750px) { 
      
@@ -547,7 +562,7 @@ footer {
         
     }
 
-    @media (max-width: 500px)
+    /* @media (max-width: 500px) */
 
 /* @media (max-width: 800px){
     ul{
