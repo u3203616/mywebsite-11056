@@ -223,8 +223,8 @@ h1 {
 
   /* Banner for all content pages*/
   .all-banner{
-  background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6));
-  background-repeat: no-repeat;
+  background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url("../images/extra1-churchill-house-by-robin-boyd-photo-copyright-darren-bradley.jpg");
+  
   background-position: center center;
   background-size: cover;
   width: 100%;
@@ -394,7 +394,7 @@ h1 {
 /* https://www.youtube.com/watch?v=2zQ9HoD_GcU&t=165s  (used to create banner image with dark transparency)*/
 
 .home-banner{
-	background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6));
+	background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url("../images/extra1-churchill-house-by-robin-boyd-photo-copyright-darren-bradley.jpg");
     background-position: center center;
     background-size: cover;
     width: 100%;
