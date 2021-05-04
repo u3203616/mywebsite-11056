@@ -3,51 +3,56 @@
 <html lang="en">
 
 <head>
+    <!-- Meta tag to set character set, gives optionsfor displaying chars -->
     <meta charset="utf-8">
-    <title>Churchill House</title>
    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
     <link href="assets/css/reset.css" rel="stylesheet" >
     <link href="assets/css/styles.css" rel="stylesheet" >
-    <!-- Meta tag to set character set, gives optionsfor displaying chars -->
+    <title>Churchill House</title>
+    
 </head>
-<body>
-        <header> 
+<header> 
+    <h1><span class="big">\Churchill House</span> <span class="small">\CH</span></h1>
+    <body>
+        <div id="page-container"></div>
+        <div class="menu-wrap">
+          <input type="checkbox" class="toggler">
+          <div class="hamburger"><div></div></div>
+          <div class="menu">
+            <div>
+              <div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="introduction.html">Introduction</a></li>
+                    <li><a href="description.html">Description</a></li>
+                    <li><a href="robin-boyd.html">Robin Boyd</a></li>
+                </ul>
+              </div>
             </div>
-                <div class="wrapper">
-                    
-                    <h1><span class="big">\Churchill House</span> <span class="small">\CH</span></h1>
-                    
-                    </div>
-                
-                    <nav id="hamnav">
-                        <!-- [THE HAMBURGER] -->
-                        <label for="hamburger">&#9776;</label>
-                        <input type="checkbox" id="hamburger"checked>
-                    
-                        <!-- [MENU ITEMS] -->                   
-                        <ul class="menu" id="hamitems">
-                            <li><a href="introduction.html">Introduction</a></li>
-                            <li><a href="description.html">Description</a></li>
-                            <li><a href="robin-boyd.html">Robin Boyd</a></li>
-                            <li><a href="statement-of-significance.html">Statement<br>of<br>Significance</a></li>
-                        </ul>
-                    
-                    </nav>
-                </div>
-            </div>
-        </header>
+          </div>
+        </div>
+
+</header>
         
         <!-- Banner Creation - https://www.youtube.com/watch?v=BkbkUtrLkls -->
         <!-- The Banner (Main Image) -->
-        <div class="banner"></div>
+        <div class="home-banner">
+        <img src="assets/images/extra1-churchill-house-by-robin boyd-photo-copyright-darren-bradley.jpg" alt="Home Image">
+        </div>
         <div class="content-area">
             <section id="section01" class="demo">
                 <a href="#section01"><span></span></a>
+                <h3></h3>
               </section>
             <div class="wrapper">
                 <h2></h2>
-                <div class="container">
+                </div>
+            
 
+
+
+
+                    
 <!--Introduction-->
 <!--https://www.youtube.com/watch?v=zmun7JzWGPE-->     
                     <section id="introduction">
@@ -60,60 +65,56 @@
                                 <h2>Introduction</h2>
                                 <p>Churchill House, at 216 Northbourne Avenue in Braddon, 
                                     was designed by Robin Boyd for the Winston Churchill Memorial Trust of Australia in 1969-70,
-                                    and construction was completed in 1971. It was Boyd’s last major commission, 
-                                    and he died prior to its completion. It is one of a small number of larger designs 
-                                    produced by Boyd and was Canberra’s first brutalist building.</p>
+                                    and construction was completed in 1971.</p>
                                     <a href="introduction.html" class="normal-btn">Read More</a>
                             </div>
                     </div>
                 </div>
+            </section>
  
-<!--Featured Images-->
-
-            <section id="featured">
-                <div class="container">
-                    <div class="featured-row">
-                        <div class="featured-col">
-                            <img src="assets/images/churchill-house-26.jpg" alt="CH1">
-                        </div>
-                        <div class="featured-col">
-                            <img src="assets/images/churchill-house-35.jpg" alt="CH2">
-                        </div>
-                        <div class="featured-col">
-                            <img src="assets/images/churchill-house-36.jpg" alt="CH3">
-                        </div>
-                    </div>
-                </div>
-                </section>      
 
 <!--Description-->
 
     <section id="description">
         <div class="row-2-col">
-            <div class="intro-left-col">
-                <div class="intro-text">
+            <div class="desc-left-col">
+                <div class="desc-text">
                     <h2>Description</h2>
                     <p>Churchill House was designed by Robin Boyd for 
                         the Winston Churchill Memorial Trust of Australia in 1969-70 
-                        and construction was completed in 1971. The building is an example of the Late Twentieth-Century 
-                        Brutalist Style (1960-) with its large areas of blank wall and off-form concrete.</p>
+                        and construction was completed in 1971. </p>
                         <a href="description.html" class="normal-btn">Read More</a>
                 </div>
         </div>
-        <div class="intro-right-col">
+        <div class="desc-right-col">
         <img src="assets/images/churchill-house-45.jpg" alt="CH29">
         </div>
 </div>
+</section>
 
-<footer>
-    <div class="footer">
-        <p>This website was produced by students in the Faculty of Arts &amp; Design, University of Canberra, 2021. </p>
+<!--Robin Boyd-->
+<section id="robin-boyd">
+    <div class="row-2-col">
+    <div class="robin-left-col">
+    <img src="assets/images/extra2-robin boyd portrait-copyright-Mark-Strizic.jpg" alt="CH29">
     </div>
-    <a href="#section01" class="footer-btn">Back to Top</a>
-</footer>    
+<div class="robin-right-col">
+        <div class="robin-text">
+            <h2>Robin Boyd</h2>
+            <p>Robin Gerard Penleigh Boyd (1919-1971) was a nationally and internationally renowned architect.
+                 He was also widely published and appreciated as an architectural critic. 
+            </p>
+                <a href="robin-boyd.html" class="normal-btn">Read More</a>
+        </div>
     </div>
-
 </div>
+</section>
+
+
+<footer class="footer">This website was produced by students in the Faculty of Arts &amp; Design, University of Canberra, 2021.
+    <br> <a href="#section01" class="footer-btn">Back to Top</a> 
+</footer>
+
 </body>
 </html>         
 

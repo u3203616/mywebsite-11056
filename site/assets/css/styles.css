@@ -12,6 +12,9 @@ body {
 	text-align: center;
     background-color: white;
     color:  rgb(38, 38, 38);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 .wrapper {
 	width: 100%;
@@ -25,7 +28,11 @@ header {
 	position: fixed;
 }
 
-
+li {
+    font-weight: bolder;
+    font-family: poppins;
+   
+}
 
 h1 {
 	width: 30%;
@@ -46,11 +53,11 @@ h1 {
     background:  rgb(38, 38, 38);
     color: white;
     border: none;
+    font-family: poppins;
 }
 
 .normal-btn:hover{
-    background:  rgb(77, 76, 76);;
-    
+    background:  rgb(77, 76, 76);
     color:  white;
 }
 #section01 a span {
@@ -67,104 +74,186 @@ h1 {
     box-sizing: border-box;
   }
 
-/*--nav--*/
+  /*--https://www.youtube.com/watch?v=DZg6UfS5zYg (used to creat hamburger and fullscreen menu)--*/
 
-/* [ON BIG SCREEN] */
-/* Wrapper */
-#hamnav {
-width: 100%;
-/* Optional */
-position: sticky;
-top: 0;
-}
-/* Hide Hamburger */
-#hamnav label, #hamburger { display: none; }
-
-/* Horizontal Menu Items */
-#hamitems { display: flex; }
-#hamitems a {
-    width: 20%; /* 100% / 5 tabs = 20% */
-  padding: 10px;
-  color: white;
-  text-decoration: none;
-  text-align: center;
-}
-#hamitems a:hover {
-    background: rgb(180, 80, 180);
+  :root {
+    --primary-color: rgba(38, 38, 38);
+    --overlay-color: rgba(77, 76, 76, 0.85);
+    --menu-speed: 0.75s;
   }
 
-
-  /* Break down menu items into vertical */
-  #hamitems a {
-    box-sizing: border-box;
-    display: block;
-    width: 100%;
-    background:  rgb(38, 38, 38) ;
-    
-    
+  .menu-wrap {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
   }
-
-  /* Toggle Show/Hide Menu */
-  #hamitems { display: none; }
-  #hamnav input:checked ~ #hamitems { display: block; }
-}
-
-
-.menu{
+  
+  .menu-wrap .toggler {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+  }
+  
+  .menu-wrap .hamburger {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    width: 60px;
+    height: 60px;
+    padding: 1rem;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
     align-items: center;
-}
-
-.menu li a{
-    display: block;
-    
-}
-nav {
-    height: 100%;
-}
-nav ul {
-	/* float: right; */
-	margin-right: 20px;
+    justify-content: center;
+  }
+  
+  /* Hamburger Line */
+  .menu-wrap .hamburger > div {
+    position: relative;
+    flex: none;
+    width: 2rem;
+    height: 2px;
+    background: #fff;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+  }
+  
+  /* Hamburger Lines - Top & Bottom */
+  .menu-wrap .hamburger > div::before,
+  .menu-wrap .hamburger > div::after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: -10px;
+    width: 100%;
+    height: 2px;
+    background: inherit;
+  }
+  
+  /* Moves Line Down */
+  .menu-wrap .hamburger > div::after {
+    top: 10px;
+  }
+  
+  /* Toggler Animation */
+  .menu-wrap .toggler:checked + .hamburger > div {
+    transform: rotate(135deg);
+  }
+  
+  /* Turns Lines Into X */
+  .menu-wrap .toggler:checked + .hamburger > div:before,
+  .menu-wrap .toggler:checked + .hamburger > div:after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+  
+  /* Show Menu */
+  .menu-wrap .toggler:checked ~ .menu {
+    visibility: visible;
+  }
+  
+  .menu-wrap .toggler:checked ~ .menu > div {
+    transform: scale(1);
+    transition-duration: var(--menu-speed);
+  }
+  
+  .menu-wrap .toggler:checked ~ .menu > div > div {
+    opacity: 1;
+    transition:  opacity 0.4s ease 0.4s;
+  }
+  
+  .menu-wrap .menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
     height: 100%;
-    align-content: center;
-    justify-content: flex-end;
-    flex-direction: column;
+    visibility: hidden;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .menu-wrap .menu > div {
+    background: var(--overlay-color);
+    border-radius: 50%;
+    width: 200vw;
+    height: 200vw;
+    display: flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0);
+    transition: all 0.4s ease;
+  }
+  
+  .menu-wrap .menu > div > div {
+    text-align: center;
+    max-width: 90vw;
+    max-height: 100vh;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+  
+  .menu-wrap .menu > div > div > ul > li {
+    list-style: none;
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 1rem;
+  }
+  
+  .menu-wrap .menu > div > div > ul > li > a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.4s ease;
+    font-family: poppins;
+  }
+  .menu-wrap .menu > div > div > ul > li > a:hover{
+      text-decoration: underline;
+  }
 
+  /* Banner for all content pages*/
+  .all-banner{
+  background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6));
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+  height: 50vh;
+  color: white;
+  font-family: poppins;
+  font-weight: bold;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  
 }
 
-nav ul li{
-    display: inline-block;
-    margin:0 5px;
-    align-self: center;
-}
+/* Body text formatting for content pages */
 
-nav ul li a{
-    color: white;
-    font-size: 17px;
-    text-transform:uppercase;
-}
-
-
-nav a {
-	text-decoration: none;
-	font-family: poppins;
-	letter-spacing: 4px;
-	text-decoration: ;
-	margin: 0 10px;
-	color: #fff;
-}
-
-a:hover{
-    color: rgb(180, 80, 180);
-    transition: .5s;
+#all-text{
+    padding: 100px 0;
+    max-width: 100%;
+    font-size: 20px;
+    word-spacing: 5px;
+    line-height: 1.5;
 }
 
 
 
-/*---introduction---*/
+
+
+/*---Introduction---*/
 
 #introduction{
     padding: 100px 0;
@@ -199,31 +288,7 @@ a:hover{
     line-height: 1.5;
 }
 
-/*---Featured Images---*/
 
-#featured{
-   width: 100%;
-}
-
-.featured-row{
-    width: 100%;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.featured-col{
-    flex-basis: 25%;
-    box-align: center;
-}
-
-.featured-col img{
-    width: 250px;
-    height: 250px;
-    border: 3px solid rgb(38, 38, 38);
-}
 
 /*Description*/
 
@@ -233,27 +298,108 @@ a:hover{
 
 }
 
-.intro-right-col img{
+.desc-right-col img{
+    width: 70%;
+
+}
+.desc-left-col{
+    flex-basis: 50%;
+}
+
+.desc-left-col img{
     width: 70%;
 
 }
 
-/* https://www.youtube.com/watch?v=oLgtucwjVI*/
+.desc-right-col{
+    flex-basis: 50%;
 
-.banner{
-	background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
-    url(file:///Users/cferg/Desktop/mywebsite-11056/site/assets/images/extra1-churchill-house-by-robin%20boyd-photo-copyright-darren-bradley.jpg);
-    background-repeat: no-repeat;
+}
+
+.desc-text{
+    max-width: 100%;
+    font-size: 20px;
+    word-spacing: 5px;
+    line-height: 1.5;
+}
+
+/* Robin Boyd */
+
+#robin-boyd{
+    padding: 100px 0;
+}
+
+.row-2-col{
+    margin-bottom: 65px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.robin-left-col{
+    flex-basis: 50%;
+}
+
+.robin-left-col img{
+    width: 70%;
+
+}
+
+.robin-right-col{
+    flex-basis: 50%;
+
+}
+
+.robin-text{
+    max-width: 100%;
+    font-size: 20px;
+    word-spacing: 5px;
+    line-height: 1.5;
+}
+
+/* Statement of Significance */
+
+#statement{
+    padding: 100px 0;
+
+}
+
+.statement-right-col img{
+    width: 70%;
+
+}
+.statement-left-col{
+    flex-basis: 50%;
+}
+
+.statement-left-col img{
+    width: 70%;
+
+}
+
+.statement-right-col{
+    flex-basis: 50%;
+
+}
+
+.statement-text{
+    max-width: 100%;
+    font-size: 20px;
+    word-spacing: 5px;
+    line-height: 1.5;
+}
+
+
+/* https://www.youtube.com/watch?v=2zQ9HoD_GcU&t=165s  (used to create banner image with dark transparency)*/
+
+.home-banner{
+	background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6));
     background-position: center center;
-    -webkit-background-size: cover;
     background-size: cover;
     width: 100%;
     height: 100vh;
     color: white;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -273,20 +419,12 @@ a:hover{
 	letter-spacing: 4px;
 	padding-top: 30px;
 	font-size: 40px;
+    font-weight: bold;
 	
 }
 
-.container{
-    display: flex;
-    font-family: poppins;
-}
 
-}
- body{
-    background-color: white;
-    font-size: 18px;
-    font-family:Arial, Helvetica, sans-serif
-}
+
 
 h1 .small{
     display: none;
@@ -310,25 +448,20 @@ h3{
 
 
 p{
-    font-size: 1rem;
+    font-size: 20px;
     font-weight: 400;
     padding: 1rem;
     margin: 5rem 5rem;
     color: black; 
     font-family: poppins;
+    font-weight: bolder;
 }
 
 img{
     max-width: 100%;
     height: auto;
-    border: 3px solid rgb(38, 38, 38);
+    border: 3px solid rgb(38, 38, 38); 
     
-    
-}
-
-main{
-    width: auto;
-    margin: 0 auto;
 }
 
 a{
@@ -340,59 +473,24 @@ a{
     padding: 18px 40px;
     background:  rgb(38, 38, 38);
     color: white;
-    border: none;
+    
 }
 
 .footer-btn:hover{
     background:  rgb(77, 76, 76);;
-    
     color:  white;
 }
 
 
 
-p a{
-    color: red;
-    
-}
-
-#homeLink{
-    z-index: 1;
-}
-
-.grid{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-}
-.grid h2, .grid div{
-    grid-column: 1/4;
-}
-
-.flex-gallery{
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.flex-gallery > li{
-    width: 40%;
-    flex-grow: 1;
-}
-
-.flex-gallery img{
-    max-height: 100%;
-    min-width: 100%;
-    object-fit: cover;
-}
-
-.footer {
-    position: static;
-    left: 0;
-    bottom: 0;
-    width: 100%;
+footer {
     background-color: rgb(38, 38, 38);
-    color: white;
+    line-height: 10vh;
+    color:  white;
     text-align: center;
+    font-family: poppins ;
   }
+  
 
 @media (max-width: 1400px) { 
     h1 .small{
@@ -406,27 +504,8 @@ p a{
 }
 
 
-/* [ON SMALL SCREENS] */
 @media screen and (max-width: 1200px){
-    /* Show Hamburger Icon */
-    #hamnav label { 
-      display: inline-block; 
-      color: white;
-      background: #a0262000;
-      font-style: normal;
-      font-size: 2em;
-      padding: 10px;
-    line-height: 80px;
-    right: 15px;
-    position: absolute;
-    }
-
-    .menu{
-        display: ;
-    }
-    
-        
-    }
+  
 
     @media screen and (max-width: 1000px){
         
@@ -437,20 +516,37 @@ p a{
      
 
         .intro-left-col {
-            min-width: 100%;
-        }
-
-        .container {
-            display: flex;
-            flex-wrap: wrap;
+            display: none;
         }
 
         .intro-right-col{
             flex-basis: 100%;
             
         }
+           
+        .desc-right-col{
+            display: none;
+
+        }
+        .desc-left-col{
+            flex-basis: 100%;
+            
+        }
+        .robin-left-col {
+            display: none;
+        }
+
+        .robin-right-col{
+            flex-basis: 100%;
+            
+        }
+        .home-banner{
+            height: auto;
+       
+
         
     }
+
     @media (max-width: 500px)
 
 /* @media (max-width: 800px){

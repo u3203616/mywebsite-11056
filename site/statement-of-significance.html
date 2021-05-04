@@ -11,31 +11,260 @@
     </head>
     
     <body>
-        <header>       
-        </div>
-            <div class="wrapper"></div>
-                
-                <h1>\<a href="index.html">CH</a></h1>
-                   
+        <header> 
+            <h1>\<a href="index.html">CH</a></h1>      
+            <body>
+                <div class="menu-wrap">
+                  <input type="checkbox" class="toggler">
+                  <div class="hamburger"><div></div></div>
+                  <div class="menu">
+                    <div>
+                      <div>
+                        <ul>
+                            <li><a href="introduction.html">Introduction</a></li>
+                            <li><a href="description.html">Description</a></li>
+                            <li><a href="robin-boyd.html">Robin Boyd</a></li>
+                            <li><a href="statement-of-significance.html">Statement<br>of<br>Significance</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-            <nav>
-                <nav id="hamnav">
-                    <!-- [THE HAMBURGER] -->
-                    <label for="hamburger">&#9776;</label>
-                    <input type="checkbox" id="hamburger"checked>
-                   
-                    <!-- [MENU ITEMS] -->                   
-            <ul class="menu" id="hamitems">
-                    <li><a href="introduction.html">Introduction</a></li>
-                    <li><a href="description.html">Description</a></li>
-                    <li><a href="robin-boyd.html">Robin Boyd</a></li>
-                    <li><a href="statement-of-significance.html">Statement<br>of<br> Significance</a></li>
-                </div>
-            </nav>
-            </nav>
-        </ul>
-        </div>
         </header>
+        
 </body>
 
 </html>
+
+
+
+
+
+
+<header> 
+</div>
+        
+        <h1><span class="big">\Churchill House</span> <span class="small">\CH</span></h1>
+        
+        </div>
+    
+        <nav id="hamnav">
+            <!-- [THE HAMBURGER] -->
+            <label for="hamburger">&#9776;</label>
+            <input type="checkbox" id="hamburger"checked>
+        
+            <!-- [MENU ITEMS] -->                   
+            <ul class="menu" id="hamitems">
+                <li><a href="introduction.html">Introduction</a></li>
+                <li><a href="description.html">Description</a></li>
+                <li><a href="robin-boyd.html">Robin Boyd</a></li>
+                <li><a href="statement-of-significance.html">Statement<br>of<br>Significance</a></li>
+            </ul>
+        
+        </nav>
+    </div>
+</div>
+</header>
+
+
+
+/*--nav--*/
+
+/* [ON BIG SCREEN] */
+/* Wrapper */
+#hamnav {
+width: 100%;
+/* Optional */
+position: sticky;
+top: 0;
+}
+/* Hide Hamburger */
+#hamnav label, #hamburger { display: none; }
+
+/* Horizontal Menu Items */
+#hamitems { display: flex; }
+#hamitems a {
+    width: 20%; /* 100% / 5 tabs = 20% */
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+}
+#hamitems a:hover {
+    background: rgb(180, 80, 180);
+  }
+
+
+  /* Break down menu items into vertical */
+  #hamitems a {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    background:  rgb(38, 38, 38) ;
+    
+    
+  }
+
+  /* Toggle Show/Hide Menu */
+  #hamitems { display: none; }
+  #hamnav input:checked ~ #hamitems { display: block; }
+}
+
+
+.menu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu li a{
+    display: block;
+    
+}
+nav {
+    height: 100%;
+}
+nav ul {
+	/* float: right; */
+	margin-right: 20px;
+    display: flex;
+    height: 100%;
+    align-content: center;
+    justify-content: flex-end;
+    flex-direction: column;
+
+}
+
+nav ul li{
+    display: inline-block;
+    margin:0 5px;
+    align-self: center;
+}
+
+nav ul li a{
+    color: white;
+    font-size: 17px;
+    text-transform:uppercase;
+}
+
+
+nav a {
+	text-decoration: none;
+	font-family: poppins;
+	letter-spacing: 4px;
+	text-decoration: ;
+	margin: 0 10px;
+	color: #fff;
+}
+
+a:hover{
+    color: rgb(180, 80, 180);
+    transition: .5s;
+}
+
+
+
+
+<!--Introduction-->
+<!--https://www.youtube.com/watch?v=zmun7JzWGPE-->     
+<section id="introduction">
+    <div class="row-2-col">
+    <div class="intro-left-col">
+    <img src="assets/images/churchill-house-29.jpg" alt="CH29">
+    </div>
+<div class="intro-right-col">
+        <div class="intro-text">
+            <h2>Introduction</h2>
+            <p>Churchill House, at 216 Northbourne Avenue in Braddon, 
+                was designed by Robin Boyd for the Winston Churchill Memorial Trust of Australia in 1969-70,
+                and construction was completed in 1971. It was Boyd’s last major commission, 
+                and he died prior to its completion. It is one of a small number of larger designs 
+                produced by Boyd and was Canberra’s first brutalist building.</p>
+                <a href="introduction.html" class="normal-btn">Read More</a>
+        </div>
+</div>
+</div>
+
+<!--Featured Images-->
+
+<section id="featured">
+<div class="container">
+<div class="featured-row">
+    <div class="featured-col">
+        <img src="assets/images/churchill-house-26.jpg" alt="CH1">
+    </div>
+    <div class="featured-col">
+        <img src="assets/images/churchill-house-35.jpg" alt="CH2">
+    </div>
+    <div class="featured-col">
+        <img src="assets/images/churchill-house-36.jpg" alt="CH3">
+    </div>
+</div>
+</div>
+</section>      
+
+<!--Description-->
+
+<section id="description">
+<div class="row-2-col">
+<div class="intro-left-col">
+<div class="intro-text">
+<h2>Description</h2>
+<p>Churchill House was designed by Robin Boyd for 
+    the Winston Churchill Memorial Trust of Australia in 1969-70 
+    and construction was completed in 1971. The building is an example of the Late Twentieth-Century 
+    Brutalist Style (1960-) with its large areas of blank wall and off-form concrete.</p>
+    <a href="description.html" class="normal-btn">Read More</a>
+</div>
+</div>
+<div class="intro-right-col">
+<img src="assets/images/churchill-house-45.jpg" alt="CH29">
+</div>
+</div>
+
+
+/*---Featured Images---*/
+
+#featured{
+   width: 100%;
+}
+
+.featured-row{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.featured-col{
+    flex-basis: 25%;
+    box-align: center;
+}
+
+.featured-col img{
+    width: 250px;
+    height: 250px;
+    border: 3px solid rgb(38, 38, 38);
+}
+
+
+<!--Featured Images-->
+
+<section id="featured">
+    <div class="container">
+        <div class="featured-row">
+            <div class="featured-col">
+                <img src="assets/images/churchill-house-26.jpg" alt="CH1">
+            </div>
+            <div class="featured-col">
+                <img src="assets/images/churchill-house-35.jpg" alt="CH2">
+            </div>
+            <div class="featured-col">
+                <img src="assets/images/churchill-house-36.jpg" alt="CH3">
+            </div>
+        </div>
+    </div>
+    </section>      
