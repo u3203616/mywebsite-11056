@@ -19,8 +19,11 @@ Unfortunately, I had forgotten to take screenshots of my site in the early stage
  REFERENCES
 
  Banner Creation - https://www.youtube.com/watch?v=2zQ9HoD_GcU&t=165s
+
  Column Assistance - https://www.youtube.com/watch?v=zmun7JzWGPE
+
  Hamburger Menu - https://www.youtube.com/watch?v=DZg6UfS5zYg
+
  General Help - https://stackoverflow.com/
- Extra Robin Boyd Image - https://art.base.co/event/10429-robin-boyd-a-portrait-of-an-australian-house#2
  
+ Extra Robin Boyd Image - https://art.base.co/event/10429-robin-boyd-a-portrait-of-an-australian-house#2
