@@ -1,5 +1,5 @@
 # mywebsite-11056
- Website produced for Front End Web Design Semester 1 2021
+## Website produced for Front End Web Design Semester 1 2021
 
 This project was the first time building a website with pure CSS & HTML by myself. Overall, I enjoyed the process and feel it has been beneficial for me in my journey as a designer. Initially, I had imagined this project would be a great challenge, however once ideas were drawn from Project 1 and progression was made through the modules on canvas, I found that this project was very interesting and quite enjoyable when the code came to life through the website.
 
@@ -25,5 +25,5 @@ Unfortunately, I had forgotten to take screenshots of my site in the early stage
  Hamburger Menu - https://www.youtube.com/watch?v=DZg6UfS5zYg
 
  General Help - https://stackoverflow.com/
- 
+
  Extra Robin Boyd Image - https://art.base.co/event/10429-robin-boyd-a-portrait-of-an-australian-house#2
